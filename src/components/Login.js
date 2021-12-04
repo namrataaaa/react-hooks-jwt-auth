@@ -66,40 +66,45 @@ const Login = (props) => {
   };
 
   return (
-    <div className="col-md-12">
-      <div className="card card-container">
-        <img
+    <div id="loginform">
+      <div>
+        {/* <img
           src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
           alt="profile-img"
           className="profile-img-card"
-        />
+        /> */}
+        <header id="headerTitle">
+        <h2 style={{color: "blue"}}>𝕷𝖔𝖌𝖎𝖓</h2>
+        </header>
 
         <Form onSubmit={handleLogin} ref={form}>
-          <div className="form-group">
+          <div className="myrow">
             <label htmlFor="username">Username</label>
             <Input
               type="text"
               className="form-control"
               name="username"
               value={username}
+              placeholder="Enter your username"
               onChange={onChangeUsername}
               validations={[required]}
             />
           </div>
 
-          <div className="form-group">
+          <div className="myrow">
             <label htmlFor="password">Password</label>
             <Input
               type="password"
               className="form-control"
               name="password"
               value={password}
+              placeholder="Enter your password"
               onChange={onChangePassword}
               validations={[required]}
             />
           </div>
 
-          <div className="form-group">
+          <div className="myrow" style={{marginTop: "15px"}}>
             <button className="btn btn-primary btn-block" disabled={loading}>
               {loading && (
                 <span className="spinner-border spinner-border-sm"></span>
@@ -121,5 +126,42 @@ const Login = (props) => {
     </div>
   );
 };
+
+// const FormHeader = props => (
+//   <div>
+//   <h2 id="headerTitle">{props.title}</h2>
+//   {/* <img
+//           src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+//           alt="profile-img"
+//           className="profile-img-card"
+//         /> */}
+//   </div>
+// );
+
+// const Form = props => (
+//   <div>
+//     <FormInput htmlFor="username" description="Username" placeholder="Enter your username" 
+//     type="text" className="form-control"
+//               name="username"
+//               value={username}
+//               onChange={onChangeUsername}
+//               validations={[required]}/>
+//     <FormInput description="Password" placeholder="Enter your password" type="password"/>
+//     <FormButton title="Log in"/>
+//   </div>
+// );
+
+// const FormButton = props => (
+//  <div id="button" class="row">
+//    <button>{props.title}</button>
+//  </div>
+// );
+
+// const FormInput = props => (
+//  <div class="row">
+//    <label>{props.description}</label>
+//    <input type={props.type} placeholder={props.placeholder}/>
+//  </div>  
+// );
 
 export default Login;

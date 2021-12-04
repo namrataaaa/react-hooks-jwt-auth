@@ -101,61 +101,67 @@ const Register = (props) => {
   };
 
   return (
-    <div className="col-md-12">
-      <div className="card card-container">
-        <img
+    <div id="loginform">
+      <div>
+        {/* <img
           src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
           alt="profile-img"
           className="profile-img-card"
-        />
+        /> */}
+        <header id="headerTitle">
+          <h2 style={{color: "blue"}}>𝕽𝖊𝖌𝖎𝖘𝖙𝖊𝖗</h2>
+        </header>
 
         <Form onSubmit={handleRegister} ref={form}>
           {!successful && (
             <div>
-              <div className="form-group">
+              <div className="myrow">
                 <label htmlFor="username">Username</label>
                 <Input
                   type="text"
                   className="form-control"
                   name="username"
+                  placeholder="Enter username"
                   value={username}
                   onChange={onChangeUsername}
                   validations={[required, vusername]}
                 />
               </div>
 
-              <div className="form-group">
+              <div className="myrow">
                 <label htmlFor="email">Email</label>
                 <Input
                   type="text"
                   className="form-control"
                   name="email"
+                  placeholder="Enter email"
                   value={email}
                   onChange={onChangeEmail}
                   validations={[required, validEmail]}
                 />
               </div>
 
-              <div className="form-group">
+              <div className="myrow">
                 <label htmlFor="password">Password</label>
                 <Input
                   type="password"
                   className="form-control"
                   name="password"
+                  placeholder="Enter Password"
                   value={password}
                   onChange={onChangePassword}
                   validations={[required, vpassword]}
                 />
               </div>
 
-              <div className="form-group">
+              <div className="myrow" style={{marginTop: "15px"}}>
                 <button className="btn btn-primary btn-block">Sign Up</button>
               </div>
             </div>
           )}
 
           {message && (
-            <div className="form-group">
+            <div className="myrow">
               <div
                 className={
                   successful ? "alert alert-success" : "alert alert-danger"

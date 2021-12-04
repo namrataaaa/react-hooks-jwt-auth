@@ -48,13 +48,13 @@ const App = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+      <nav className="navbar navbar-expand navbar-dark fixed-top" style={{backgroundColor: "#000099"}}>
         <Link to={"/"} className="navbar-brand">
-          bezKoder
+          Rural Healthcare System
         </Link>
         <div className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link to={"/home"} className="nav-link">
+            <Link to={"/home"} className="nav-link" style={{color: "#FCF6F6"}, {fontSize: "18px"}}>
               Home
             </Link>
           </li>

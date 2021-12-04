@@ -1,3 +1,7 @@
+.nav-link {
+  color: white;
+}
+
 label {
   display: block;
   margin-top: 10px;
@@ -29,4 +33,101 @@ label {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+}
+
+/* Login Form */
+body{
+  background: rgb(34, 77, 195);
+  background: linear-gradient(135deg, rgb(34, 85, 195) 0%,     rgb(45, 253, 243) 100%);
+  font-family: "work sans";
+}
+
+html{
+  font-size: 100%;
+}
+
+#loginform{
+  padding: 30px;
+  max-width: 500px;
+  min-width: 300px;
+  max-height: 700px;
+  width: 30%;
+  height: 60%;
+  margin: 100px auto;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+}
+
+#headerTitle{
+  text-align: center;
+  font-family: 'open sans', sans-serif;
+  padding: 1rem 0;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.myrow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  max-width: 100%;
+}
+
+.myrow input{
+  width: 90%;
+  box-sizing: border-box;
+	border: none;
+  font-size: 1.3rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: inset 0px -3px 0px 0px rgba(187,187,187,0.2);
+  transition: box-shadow 0.2s ease-in;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.myrow input:focus{
+   box-shadow: inset 0px -3px 0px 0px rgba(34,193,195,0.7);
+   outline: none;
+}
+
+.myrow input::-webkit-input-placeholder{
+  opacity: 1;
+  transition: opacity 0.25s ease-out;
+}
+
+.myrow input:hover::-webkit-input-placeholder,
+.myrow input:focus::-webkit-input-placeholder{
+  opacity: 0;
+}
+
+.myrow label{
+  align-self: start;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 0.2rem;
+  color: darkgray;
+}
+
+.myrow button{
+  border-radius: 25px;
+  width: 80%;
+  height: 40px;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 700;
+  background: rgb(34,193,195);
+  background: linear-gradient(90deg, rgb(34, 85, 195) 0%,     rgb(45, 253, 243) 100%);
+  border: 0px;
+  cursor: pointer;
+  transition: opacity 0.25s ease-out;
+}
+
+.myrow button:hover{
+  opacity: 0.8;
+}
+
+#button{
+  padding-bottom: 1.5rem;
 }
